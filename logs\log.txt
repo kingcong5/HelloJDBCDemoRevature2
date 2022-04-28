@@ -1,151 +1,23 @@
-2022-04-28 11:26:52 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 11:27:27 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 11:27:52 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 11:27:52 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=apple, productPrice=2.0, productExpDate=2022-08-01]
-2022-04-28 11:27:52 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: null 
-Username: null 
-Password: null
-2022-04-28 11:27:52 WARN  ConnectionUtil:46 - Unable to obtain connection to database
-java.sql.SQLException: The url cannot be null
-	at java.sql.DriverManager.getConnection(DriverManager.java:649)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:39)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:28)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 11:27:52 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 11:47:55 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 11:48:04 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 11:48:30 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 11:48:30 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=apple, productPrice=4.0, productExpDate=2022-02-09]
-2022-04-28 11:48:30 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: null 
-Username: null 
-Password: null
-2022-04-28 11:48:30 WARN  ConnectionUtil:46 - Unable to obtain connection to database
-java.sql.SQLException: The url cannot be null
-	at java.sql.DriverManager.getConnection(DriverManager.java:649)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:39)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:28)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 11:48:30 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 13:15:14 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 13:15:22 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 13:15:40 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 13:15:40 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=pear, productPrice=3.0, productExpDate=2022-07-01]
-2022-04-28 13:15:40 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com 
-Username: postgres 
-Password: Feg5!dfger
-2022-04-28 13:15:40 WARN  ConnectionUtil:46 - Unable to obtain connection to database
-java.sql.SQLException: No suitable driver found for jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:39)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:28)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 13:15:40 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 13:16:33 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 13:16:37 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 13:16:52 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 13:16:52 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=pear, productPrice=7.0, productExpDate=2022-06-05]
-2022-04-28 13:16:52 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com/ 
-Username: postgres 
-Password: Feg5!dfger
-2022-04-28 13:16:54 DEBUG ConnectionUtil:44 - Connection has been successfully established.
-2022-04-28 13:16:54 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 13:16:54 WARN  ProductDAOImpl:51 - Unable to execute SQL statement
-org.postgresql.util.PSQLException: ERROR: relation "products" does not exist
-  Position: 13
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:44)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 13:18:43 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 13:18:54 INFO  MainDriver:83 - In driver class: User chose option 3 (get all products)...
-2022-04-28 13:18:54 INFO  ProductServiceImpl:35 - In service layer - retrieving all products...
-2022-04-28 13:18:54 INFO  ProductDAOImpl:112 - In DAO layer: getting all products from DB...
-2022-04-28 13:18:54 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com/ 
-Username: postgres 
-Password: Feg5!dfger
-2022-04-28 13:18:55 DEBUG ConnectionUtil:44 - Connection has been successfully established.
-2022-04-28 13:18:55 WARN  ProductDAOImpl:158 - Unable to retrieve products from the database
-org.postgresql.util.PSQLException: ERROR: relation "products" does not exist
-  Position: 15
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
-	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:226)
-	at com.revature.repositories.ProductDAOImpl.findAll(ProductDAOImpl.java:122)
-	at com.revature.services.ProductServiceImpl.getAllProducts(ProductServiceImpl.java:36)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:84)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 13:19:12 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 13:19:16 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 13:19:41 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 13:19:41 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=opal, productPrice=77.0, productExpDate=2022-09-01]
-2022-04-28 13:19:41 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com/ 
-Username: postgres 
-Password: Feg5!dfger
-2022-04-28 13:19:48 DEBUG ConnectionUtil:44 - Connection has been successfully established.
-2022-04-28 13:19:48 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 13:19:48 WARN  ProductDAOImpl:51 - Unable to execute SQL statement
-org.postgresql.util.PSQLException: ERROR: relation "products" does not exist
-  Position: 13
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:44)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
-2022-04-28 14:04:04 INFO  MainDriver:24 - Starting application. Loading welcome screen...
-2022-04-28 14:04:10 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
-2022-04-28 14:04:30 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
-2022-04-28 14:04:30 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=peach, productPrice=6.0, productExpDate=2022-09-23]
-2022-04-28 14:04:30 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
-URL: jdbc:postgresql://database-2.cfimzbvzhnmt.us-east-2.rds.amazonaws.com/ 
-Username: postgres 
-Password: Feg5!dfger
-2022-04-28 14:04:31 DEBUG ConnectionUtil:44 - Connection has been successfully established.
-2022-04-28 14:04:31 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
-2022-04-28 14:04:31 WARN  ProductDAOImpl:51 - Unable to execute SQL statement
-org.postgresql.util.PSQLException: ERROR: relation "products" does not exist
-  Position: 13
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:119)
-	at com.revature.repositories.ProductDAOImpl.insert(ProductDAOImpl.java:44)
-	at com.revature.services.ProductServiceImpl.addNewProduct(ProductServiceImpl.java:18)
-	at com.revature.drivers.MainDriver.welcomeScreen(MainDriver.java:58)
-	at com.revature.drivers.MainDriver.main(MainDriver.java:18)
+2022-04-28 16:33:58 INFO  MainDriver:24 - Starting application. Loading welcome screen...
+2022-04-28 16:34:00 INFO  MainDriver:38 - In driver class: User chose option 1 (add new product)...
+2022-04-28 16:34:09 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
+2022-04-28 16:34:09 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=Jello, productPrice=6.99, productExpDate=2022-12-31]
+2022-04-28 16:34:09 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
+URL: jdbc:postgresql://solbikeshop2.chzlwngfvrtn.us-east-1.rds.amazonaws.com:5432/CycleCity 
+Username: solbikeshop 
+Password: detnez-tehqev-5Qadwa
+2022-04-28 16:34:10 DEBUG ConnectionUtil:44 - Connection has been successfully established.
+2022-04-28 16:34:10 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
+2022-04-28 16:34:10 INFO  ProductDAOImpl:46 - New product has been successfully created.
+2022-04-28 16:36:09 INFO  MainDriver:24 - Starting application, loading welcome screen.
+2022-04-28 16:36:11 INFO  MainDriver:39 - In driver class: User chose option 1 (add new product)...
+2022-04-28 16:36:20 INFO  ProductServiceImpl:17 - In service layer - sending new product request...
+2022-04-28 16:36:20 DEBUG ProductDAOImpl:25 - Product: Product [productId=0, productName=Jello, productPrice=6.99, productExpDate=2022-12-31]
+2022-04-28 16:36:20 DEBUG ConnectionUtil:32 - Making a database credentials with following credentials: 
+URL: jdbc:postgresql://solbikeshop2.chzlwngfvrtn.us-east-1.rds.amazonaws.com:5432/CycleCity 
+Username: solbikeshop 
+Password: detnez-tehqev-5Qadwa
+2022-04-28 16:36:21 DEBUG ConnectionUtil:44 - Connection has been successfully established.
+2022-04-28 16:36:21 INFO  ProductDAOImpl:29 - In DAO layer: making a new product in db...
+2022-04-28 16:36:21 INFO  ProductDAOImpl:46 - New product has been successfully created.
+2022-04-28 16:36:21 INFO  MainDriver:63 - In driver class: User chose option 2 (get product by id)...

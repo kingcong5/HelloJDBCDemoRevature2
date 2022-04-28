@@ -19,44 +19,46 @@ public class MainDriver {
 	}
 
 	public static void welcomeScreen() {
-		Scanner scanner = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 		
-		logger.info("Starting application. Loading welcome screen...");
-		System.out.println("Welcome using to JDBC Demo!");
-		System.out.println("Select an option from below:");
+		logger.info("Starting application, loading welcome screen.");
+		
+		System.out.println("Welcome to using JDBC Demo!");
+		System.out.println("Select an option from below");
 		System.out.println("1 - Add new product");
 		System.out.println("2 - Get product by id");
 		System.out.println("3 - Get all products");
 		System.out.println("4 - Update a product");
 		System.out.println("0 - Exit app");
 		System.out.println("\nSelection: ");
-		
-		int userPick = scanner.nextInt();
-		
-		switch (userPick) {
+
+		int selection = Integer.parseInt(scanner.nextLine());
+
+		switch (selection) {
 		case 1:
 			logger.info("In driver class: User chose option 1 (add new product)...");
+			
 			Product target = new Product();
 			
-			//get info from user
+			// Get user info
 			System.out.println("Please provide a name for this new product: ");
-			String name = scanner.next();
-			
-			System.out.println("Please provide a price for this new product: ");
-			double price = scanner.nextDouble();
-			
-			System.out.println("Please provide an expiration date for this new product (format: YYYY-MM-DD): ");
-			String expDateString = scanner.next();
-			LocalDate exp_date = LocalDate.parse(expDateString);
-			
+			String name = scanner.nextLine();
+
+			System.out.print("Please provide a price for this new product: ");
+			double price = Double.parseDouble(scanner.nextLine());
+
+			System.out.print("Please provide a expiration date for this new product: ");
+			String expDateString = scanner.nextLine();
+
+			LocalDate expDate = LocalDate.parse(expDateString);
+
 			target.setProductId(0);
 			target.setProductName(name);
 			target.setProductPrice(price);
-			target.setProductExpDate(exp_date);
+			target.setProductExpDate(expDate);
 			
-			//call your service method
+			// Call service method
 			productService.addNewProduct(target);
-			break;
 		case 2:
 			logger.info("In driver class: User chose option 2 (get product by id)...");
 			System.out.println("Please enter the id number: ");
